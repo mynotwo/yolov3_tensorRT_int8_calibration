@@ -22,9 +22,7 @@ For specific software versions, see the [TensorRT Installation Guide](https://do
 1.  Create an ONNX version of YOLOv3 with the following command. The Python script will also download all necessary files from the official mirrors (only once).
 	`python yolov3_to_onnx.py`
 
-    When running this sample you could get middle layer output by changing the definition of variable "output_layer_name", layer name can be get in yolov3.onnx
-
-2.  Build a TensorRT engine from the generated ONNX file and run inference on a sample image, which will also be downloaded during the first run.
+2.  Build a TensorRT engine from the generated ONNX file and run inference on the sample image `dog.jpg`, which is included in this repository (the script downloads it only if the file is missing).
 	`python onnx_to_tensorrt_int8.py`
 
     When running this sample you could get middle layer output by changing the definition of variable "output_layer_name", layer name can be found in yolov3.onnx
